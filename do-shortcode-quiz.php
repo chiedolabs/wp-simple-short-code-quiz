@@ -6,18 +6,30 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 add_shortcode( 'do-shortcode-quiz', 'do_shortcode_quiz' );
 function do_shortcode_quiz( $atts , $content = null ) {
+  $atts = shortcode_atts( array(
+    'title' => '',
+  ), $atts, 'do-shortcode-quiz' );
 ?>
   <div class="do-shortcode-quiz">
-    <?php echo do_shortcode($content) ?>
+    <div class="do-shortcode-title"><?php echo $atts['title'] ?></div>
+    <div class="do-shortcode-questions">
+      <?php echo do_shortcode($content) ?>
+    </div>
   </div>
 <?php
 }
 
 add_shortcode( 'do-shortcode-question', 'do_shortcode_question' );
 function do_shortcode_question( $atts , $content = null ) {
+  $atts = shortcode_atts( array(
+    'title' => '',
+  ), $atts, 'do-shortcode-quiz' );
 ?>
   <div class="do-shortcode-question">
-    <?php echo do_shortcode($content) ?>
+    <div class="do-shortcode-title"><?php echo $atts['title'] ?></div>
+    <div class="do-shortcode-choices">
+      <?php echo do_shortcode($content) ?>
+    </div>
   </div>
 <?php
 }
