@@ -43,19 +43,22 @@ jQuery(document).ready(function() {
       updateView();
     }
 
-    var showChoiceMessage = function(){
+    var choiceSelected = function(){
       // First hide all of the other choice messages
       $(this).siblings().find('.do-shortcode-message').css('display','none');
 
       // Show the message for the choice we just clicked on
       $(this).find('.do-shortcode-message').css('display','block');
+      
+      // Make sure the radio button is updated
+      $(this).find('input').attr('checked', true);
     }
 
     
     // Bind functions to events
     $('.do-shortcode-next').click(nextQuestion);
     $('.do-shortcode-prev').click(previousQuestion);
-    $('.do-shortcode-choice').click(showChoiceMessage);
+    $('.do-shortcode-choice').click(choiceSelected);
 
     // Run the first call of updating the view and set the first question as the first current question
     $('.do-shortcode-question').first().addClass('do-shortcode-current-question');

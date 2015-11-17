@@ -54,9 +54,9 @@ function do_shortcode_question( $atts , $content = null ) {
 ?>
   <div class="do-shortcode-question">
     <h3 class="do-shortcode-title"><?php echo $atts['title'] ?></h3>
-    <div class="do-shortcode-choices">
+    <form class="do-shortcode-choices">
       <?php echo do_shortcode($content) ?>
-    </div>
+    </form>
   </div>
 <?php
 }
@@ -75,7 +75,7 @@ function do_shortcode_choice( $atts , $content = null ) {
   }
 ?>
   <div class="do-shortcode-choice">
-    <?php echo $content ?>
+    <input type='radio' name="choice"/> <?php echo $content ?>
     <div class="do-shortcode-message"><?php echo $message; ?></div>
   </div>
 <?php
