@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
           count++;
         }
       });
-      
+
       // Update the next and previous buttons' visibility
       if(currentQuestionNum === 1 || currentQuestionNum === null) {
         $('.simple-shortcode-prev').css('display', 'none');
@@ -28,30 +28,29 @@ jQuery(document).ready(function() {
         $('.simple-shortcode-next').css('display', 'inline-block');
       }
     }
-    
+
     var previousQuestion = function(){
       var currentQuestion = $('.simple-shortcode-question.simple-shortcode-current-question');
       currentQuestion.removeClass('simple-shortcode-current-question');
-      currentQuestion.prev().addClass('simple-shortcode-current-question');
+      currentQuestion.prevAll('.simple-shortcode-question').first().addClass('simple-shortcode-current-question');
       updateView();
     }
 
     var nextQuestion = function(){
       var currentQuestion = $('.simple-shortcode-question.simple-shortcode-current-question');
       currentQuestion.removeClass('simple-shortcode-current-question');
-      currentQuestion.next().addClass('simple-shortcode-current-question');
+      currentQuestion.nextAll('.simple-shortcode-question').first().addClass('simple-shortcode-current-question');
       updateView();
     }
 
     var choiceSelected = function(){
       // First hide all of the other choice messages
-      $(this).parent().siblings().find('.simple-shortcode-message').css('display','none');
+      $(this).parent().siblings('.simple-shortcode-question').find('.simple-shortcode-message').css('display','none');
 
       // Show the message for the choice we just clicked on
       $(this).parent().find('.simple-shortcode-message').css('display','block');
     }
 
-    
     // Bind functions to events
     $('.simple-shortcode-next').click(nextQuestion);
     $('.simple-shortcode-prev').click(previousQuestion);

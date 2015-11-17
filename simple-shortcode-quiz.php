@@ -11,11 +11,9 @@ function simple_shortcode_quiz_scripts() {
 
 add_shortcode( 'simple-shortcode-quiz', 'simple_shortcode_quiz' );
 function simple_shortcode_quiz( $atts , $content = null ) {
-  $atts = shortcode_atts( array(
-    'title' => '',
-  ), $atts, 'simple-shortcode-quiz' );
+  ob_start();
 ?>
-  <style> 
+  <style>
     .simple-shortcode-quiz { margin-bottom: 20px; }
 
     .simple-shortcode-questions > br, .simple-shortcode-questions > p,
@@ -35,7 +33,6 @@ function simple_shortcode_quiz( $atts , $content = null ) {
     .simple-shortcode-prev, .simple-shortcode-next { display: none }
   </style>
   <div class="simple-shortcode-quiz">
-    <h2 class="simple-shortcode-title"><?php echo $atts['title'] ?></h2>
     <div class="simple-shortcode-questions">
       <?php echo do_shortcode($content) ?>
     </div>
@@ -45,21 +42,24 @@ function simple_shortcode_quiz( $atts , $content = null ) {
     </div>
   </div>
 <?php
+  $result = ob_get_contents ();
+  ob_end_clean();
+  return $result;
 }
 
 add_shortcode( 'simple-shortcode-question', 'simple_shortcode_question' );
 function simple_shortcode_question( $atts , $content = null ) {
-  $atts = shortcode_atts( array(
-    'title' => '',
-  ), $atts, 'simple-shortcode-question' );
+  ob_start();
 ?>
   <div class="simple-shortcode-question">
-    <h3 class="simple-shortcode-title"><?php echo $atts['title'] ?></h3>
     <form class="simple-shortcode-choices">
       <?php echo do_shortcode($content) ?>
     </form>
   </div>
 <?php
+  $result = ob_get_contents ();
+  ob_end_clean();
+  return $result;
 }
 
 add_shortcode( 'simple-shortcode-choice', 'simple_shortcode_choice' );
@@ -74,11 +74,15 @@ function simple_shortcode_choice( $atts , $content = null ) {
   } else {
     $message = "<span class='simple-shortcode-incorrect'><strong>Incorrect:</strong> " . $atts['message']. '</span>';
   }
+  ob_start();
 ?>
   <div class="simple-shortcode-choice">
     <input type='radio' name="choice"/> <?php echo $content ?>
     <div class="simple-shortcode-message"><?php echo $message; ?></div>
   </div>
 <?php
+  $result = ob_get_contents ();
+  ob_end_clean();
+  return $result;
 }
 ?>
