@@ -24,15 +24,19 @@ function do_shortcode_quiz( $atts , $content = null ) {
     .do-shortcode-choices > br, .do-shortcode-choices > p,
     .do-shortcode-choice > br, .do-shortcode-choice > p { display: none; }
 
+    .do-shortcode-nav { margin-top: 10px; }
+    .do-shortcode-btn { background: #000000; color: #ffffff; padding:10px; }
     .do-shortcode-prev, .do-shortcode-next { display: none }
   </style>
   <div class="do-shortcode-quiz">
-    <div class="do-shortcode-title"><?php echo $atts['title'] ?></div>
+    <h2 class="do-shortcode-title"><?php echo $atts['title'] ?></h2>
     <div class="do-shortcode-questions">
       <?php echo do_shortcode($content) ?>
     </div>
-    <div class="do-shortcode-prev do-shortcode-btn">Previous</div>
-    <div class="do-shortcode-next do-shortcode-btn">Next</div>
+    <div class="do-shortcode-nav">
+      <span class="do-shortcode-prev do-shortcode-btn">Previous<span class="do-shortcode-nav-sep">&nbsp;&nbsp;</span></span>
+      <span class="do-shortcode-next do-shortcode-btn">Next</span>
+    </div>
   </div>
 <?php
 }
@@ -44,7 +48,7 @@ function do_shortcode_question( $atts , $content = null ) {
   ), $atts, 'do-shortcode-question' );
 ?>
   <div class="do-shortcode-question">
-    <div class="do-shortcode-title"><?php echo $atts['title'] ?></div>
+    <h3 class="do-shortcode-title"><?php echo $atts['title'] ?></h3>
     <div class="do-shortcode-choices">
       <?php echo do_shortcode($content) ?>
     </div>

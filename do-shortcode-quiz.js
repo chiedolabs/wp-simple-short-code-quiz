@@ -19,13 +19,13 @@ jQuery(document).ready(function() {
       if(currentQuestionNum === 1 || currentQuestionNum === null) {
         $('.do-shortcode-prev').css('display', 'none');
       } else {
-        $('.do-shortcode-prev').css('display', 'block');
+        $('.do-shortcode-prev').css('display', 'inline-block');
       }
 
       if(currentQuestionNum === numQuestions) {
         $('.do-shortcode-next').css('display', 'none');
       } else {
-        $('.do-shortcode-next').css('display', 'block');
+        $('.do-shortcode-next').css('display', 'inline-block');
       }
     }
     
