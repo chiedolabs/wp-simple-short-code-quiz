@@ -26,8 +26,8 @@ function do_shortcode_quiz( $atts , $content = null ) {
     .do-shortcode-choice { cursor: pointer; }
     
     .do-shortcode-message { display: none; }
-    .do-shortcode-correct { color: green; font-size: 12px; }
-    .do-shortcode-incorrect { color: red; font-size: 12px; }
+    .do-shortcode-correct { color: green; }
+    .do-shortcode-incorrect { color: red; }
 
     .do-shortcode-nav { margin-top: 10px; }
     .do-shortcode-btn { background: #000000; color: #ffffff; padding:10px; cursor: pointer; }
