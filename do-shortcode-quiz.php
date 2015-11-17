@@ -8,7 +8,7 @@ add_shortcode( 'do-shortcode-quiz', 'do_shortcode_quiz' );
 function do_shortcode_quiz( $atts , $content = null ) {
 ?>
   <div class="do-shortcode-quiz">
-    <?php echo $content ?>
+    <?php echo do_shortcode($content) ?>
   </div>
 <?php
 }
@@ -17,7 +17,7 @@ add_shortcode( 'do-shortcode-question', 'do_shortcode_question' );
 function do_shortcode_question( $atts , $content = null ) {
 ?>
   <div class="do-shortcode-question">
-    <?php echo $content ?>
+    <?php echo do_shortcode($content) ?>
   </div>
 <?php
 }
