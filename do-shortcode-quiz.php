@@ -23,9 +23,14 @@ function do_shortcode_quiz( $atts , $content = null ) {
 
     .do-shortcode-choices > br, .do-shortcode-choices > p,
     .do-shortcode-choice > br, .do-shortcode-choice > p { display: none; }
+    .do-shortcode-choice { cursor: pointer; }
+    
+    .do-shortcode-message { display: none; }
+    .do-shortcode-correct { color: green; font-size: 12px; }
+    .do-shortcode-incorrect { color: red; font-size: 12px; }
 
     .do-shortcode-nav { margin-top: 10px; }
-    .do-shortcode-btn { background: #000000; color: #ffffff; padding:10px; }
+    .do-shortcode-btn { background: #000000; color: #ffffff; padding:10px; cursor: pointer; }
     .do-shortcode-prev, .do-shortcode-next { display: none }
   </style>
   <div class="do-shortcode-quiz">
@@ -62,10 +67,16 @@ function do_shortcode_choice( $atts , $content = null ) {
     'message' => '',
     'correct' => false,
   ), $atts, 'do-shortcode-choice' );
+
+  if($atts['correct']) {
+    $message = "<span class='do-shortcode-correct'><strong>Correct:</strong> " . $atts['message']. '</span>';
+  } else {
+    $message = "<span class='do-shortcode-incorrect'><strong>Incorrect:</strong> " . $atts['message']. '</span>';
+  }
 ?>
   <div class="do-shortcode-choice">
-    <div class="do-stortcode-message"><?php echo $atts['message'] ?></div>
     <?php echo $content ?>
+    <div class="do-shortcode-message"><?php echo $message; ?></div>
   </div>
 <?php
 }
