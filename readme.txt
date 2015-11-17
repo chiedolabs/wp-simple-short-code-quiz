@@ -7,11 +7,11 @@ Stable tag: 4.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Now you can easily create mini-quizes in your blog posts just using shortcodes. These quizes would be intended for your readers. If you need something more complex that allows you to track results, this is not the plugin for you.
+Now you can easily create mini-quizzes in your blog posts just using shortcodes. These quizzes would be intended for your readers. If you need something more complex that allows you to track results, this is not the plugin for you.
 
 == Description ==
 
-Now you can easily create mini-quizes in your blog posts just using shortcodes. These quizes would be intended for your readers. If you need something more complex that allows you to track results, this is not the plugin for you.
+Now you can easily create mini-quizzes in your blog posts just using shortcodes. These quizzes would be intended for your readers. If you need something more complex that allows you to track results, this is not the plugin for you.
 
 == Installation ==
 
