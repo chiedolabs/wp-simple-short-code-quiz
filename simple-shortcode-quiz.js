@@ -45,7 +45,7 @@ jQuery(document).ready(function() {
 
     var choiceSelected = function(){
       // First hide all of the other choice messages
-      $(this).parent().siblings('.simple-shortcode-question').find('.simple-shortcode-message').css('display','none');
+      $(this).closest('.simple-shortcode-choice').siblings().find('.simple-shortcode-message').css('display','none');
 
       // Show the message for the choice we just clicked on
       $(this).parent().find('.simple-shortcode-message').css('display','block');
