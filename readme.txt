@@ -1,4 +1,4 @@
-=== DO Shortcode Quiz ===
+=== Simple Shortcode Quiz ===
 Contributors: chiedojohn
 Tags: shortcode-quiz, quiz
 Requires at least: 4.3.1
