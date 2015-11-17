@@ -15,7 +15,9 @@ function do_shortcode_quiz( $atts , $content = null ) {
     'title' => '',
   ), $atts, 'do-shortcode-quiz' );
 ?>
-  <style>
+  <style> 
+    .do-shortcode-quiz { margin-bottom: 20px; }
+
     .do-shortcode-questions > br, .do-shortcode-questions > p,
     .do-shortcode-question > br, .do-shortcode-question > p { display: none; }
     .do-shortcode-question { display: none; }
