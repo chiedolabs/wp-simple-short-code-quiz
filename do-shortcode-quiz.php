@@ -24,7 +24,7 @@ function do_shortcode_quiz( $atts , $content = null ) {
     .do-shortcode-choices > br, .do-shortcode-choices > p,
     .do-shortcode-choice > br, .do-shortcode-choice > p { display: none; }
     .do-shortcode-choice { cursor: pointer; }
-    
+
     .do-shortcode-message { display: none; }
     .do-shortcode-correct { color: green; }
     .do-shortcode-incorrect { color: red; }
