@@ -16,9 +16,14 @@ function do_shortcode_quiz( $atts , $content = null ) {
   ), $atts, 'do-shortcode-quiz' );
 ?>
   <style>
+    .do-shortcode-questions > br, .do-shortcode-questions > p,
+    .do-shortcode-question > br, .do-shortcode-question > p { display: none; }
     .do-shortcode-question { display: none; }
     .do-shortcode-current-question { display: block; }
-    
+
+    .do-shortcode-choices > br, .do-shortcode-choices > p,
+    .do-shortcode-choice > br, .do-shortcode-choice > p { display: none; }
+
     .do-shortcode-prev, .do-shortcode-next { display: none }
   </style>
   <div class="do-shortcode-quiz">
