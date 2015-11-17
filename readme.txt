@@ -15,10 +15,29 @@ Now you can easily create mini-quizzes in your blog posts just using shortcodes.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
 1. Upload to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+
+Now you can create plugins in your pages and posts. You should do this in text mode as opposed to visual. see the following example:
+
+`
+[simple-shortcode-quiz]
+  [simple-shortcode-question]
+    What is the best movie of all times?
+    [simple-shortcode-choice message="This is simply not true"]The Matrix Reloaded[/simple-shortcode-choice]
+    [simple-shortcode-choice message="Dang straight." correct=true]The Matrix[/simple-shortcode-choice]
+  [/simple-shortcode-question]
+  [simple-shortcode-question]
+    What is the best food?
+    [simple-shortcode-choice message="Just no."]
+      Pizza
+    [/simple-shortcode-choice]
+    [simple-shortcode-choice message="You got it pal!" correct=true]
+      Steak
+    [/simple-shortcode-choice]
+  [/simple-shortcode-question]
+[/simple-shortcode-quiz]
+`
 
 == Frequently Asked Questions ==
 
