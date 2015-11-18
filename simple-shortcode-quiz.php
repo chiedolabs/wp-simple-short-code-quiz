@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Simple Shortcode quiz
-Plugin URI: https://github.com/chiedolabs/wp-simple-short-code-quiz
+Plugin URI: https://wordpress.org/plugins/simple-shortcode-quiz/
 Description: Now you can easily create mini-quizzes in your blog posts just using shortcodes. These quizzes would be intended for your readers. If you need something more complex that allows you to track results, this is not the plugin for you.
-Version: 1.0.2
-Author: Chiedo John
+Version: 1.0.3
+Author: Chiedo Labs
 Author URI: https://labs.chie.do
 License: GPLv2 or later
 */
