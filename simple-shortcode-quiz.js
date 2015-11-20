@@ -55,6 +55,10 @@ jQuery(document).ready(function() {
     $('.simple-shortcode-next').click(nextQuestion);
     $('.simple-shortcode-prev').click(previousQuestion);
     $('.simple-shortcode-choice input').click(choiceSelected);
+    $('.simple-shortcode-hidden-answer').click(function() {
+      $(this).find('.temp').css('display', 'none');
+      $(this).find('.answer').css('display', 'block');
+    });
 
     // Run the first call of updating the view and set the first question as the first current question
     $('.simple-shortcode-question').first().addClass('simple-shortcode-current-question');

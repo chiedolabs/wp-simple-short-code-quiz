@@ -3,7 +3,7 @@ Contributors: chiedolabs, chiedojohn
 Tags: shortcode-quiz, quiz
 Requires at least: 4.3.1
 Tested up to: 4.3.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,16 @@ Now you can create plugins in your pages and posts. You should do this in text m
 [/simple-shortcode-quiz]
 `
 
+Or you can create an even more basic quiz with basic text and then show a hidden answer like this:
+
+Where is Paris?
+`
+[simple-shortcode-hidden-answer]
+France
+[/simple-shortcode-hidden-answer]
+`
+
+
 == Frequently Asked Questions ==
 
 = How did you create such an awesome plugin? =
@@ -50,5 +60,7 @@ With swag.
 
 == Changelog ==
 
+= 1.0.5 =
+* Added simple-shortcode-hidden-answer shortcode
 = 0.1 =
 * Initial Build

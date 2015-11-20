@@ -3,7 +3,7 @@
 Plugin Name: Simple Shortcode quiz
 Plugin URI: https://wordpress.org/plugins/simple-shortcode-quiz/
 Description: Now you can easily create mini-quizzes in your blog posts just using shortcodes. These quizzes would be intended for your readers. If you need something more complex that allows you to track results, this is not the plugin for you.
-Version: 1.0.4
+Version: 1.0.5
 Author: Chiedo Labs
 Author URI: https://labs.chie.do
 License: GPLv2 or later
@@ -85,6 +85,20 @@ function simple_shortcode_choice( $atts , $content = null ) {
   <div class="simple-shortcode-choice">
     <input type='radio' name="choice"/> <?php echo $content ?>
     <div class="simple-shortcode-message"><?php echo $message; ?></div>
+  </div>
+<?php
+  $result = ob_get_contents ();
+  ob_end_clean();
+  return $result;
+}
+
+add_shortcode( 'simple-shortcode-hidden-answer', 'simple_shortcode_hidden_answer' );
+function simple_shortcode_hidden_answer( $atts , $content = null ) {
+  ob_start();
+?>
+  <div class="simple-shortcode-hidden-answer" style="cursor: pointer; font-weight: 700;">
+    <div class="temp">Show answer</div>
+    <div class="answer" style="display: none;"><?php echo $content ?></div>
   </div>
 <?php
   $result = ob_get_contents ();
